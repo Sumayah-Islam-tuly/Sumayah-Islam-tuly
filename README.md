@@ -1,4 +1,4 @@
-### 💁‍♀️ Hey there, I’m Sumayah Islam Tuly — your friendly neighborhood Shopify sorceress ✨
+💁‍♀️ Hey there, I’m Sumayah Islam — your friendly neighborhood Shopify sorceress
 
  💄 By day, I’m styling Shopify themes like runway models — sleek, fast, and impossible to ignore.<br>
  💻 By night, I’m optimizing conversion rates like a CRO cupid — making users fall in love (and click “Add to Cart”) 💘<br>
