@@ -1,0 +1,69 @@
+/* ============================================
+   TYPOGRAPHY — EXACT Ramond Holdings
+   Display: Cinzel | Body: Inter
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-display {
+  font-family: 'Cinzel', serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Type Scale */
+.display-xl {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(48px, 8vw, 128px);
+  line-height: 0.9;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+}
+
+.display-lg {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(32px, 5vw, 80px);
+  line-height: 0.9;
+  font-weight: 400;
+}
+
+.display-md {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(24px, 3vw, 48px);
+  line-height: 1;
+  font-weight: 400;
+}
+
+.body-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #d6d3d1;
+}
+
+.label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+.label-orange { color: #f97316; }
+.label-muted  { color: #78716c; }
+
+.italic-accent {
+  font-style: italic;
+  font-family: 'Cinzel', serif;
+}
+
+.ghost-text {
+  color: #292524;
+}

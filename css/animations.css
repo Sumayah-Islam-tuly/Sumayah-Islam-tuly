@@ -1,0 +1,98 @@
+/* ============================================
+   ANIMATIONS — Anti-Gravity Motion System
+   EXACT match to Ramond Holdings design
+   ============================================ */
+
+/* 1. Marquee Scroll */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 40s linear infinite; }
+
+/* 2. Bounce — scroll indicator */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+.animate-bounce { animation: bounce 1s ease infinite; }
+
+/* 3. Pulse — status dot */
+@keyframes pulse {
+  50% { opacity: 0.5; }
+}
+.animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+/* 4. Anti-gravity Float */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+.animate-float { animation: float 3s ease-in-out infinite; }
+
+/* 5. Fade + Slide In — section entry */
+@keyframes fadeSlideIn {
+  0%   { opacity: 0; transform: translateY(30px); filter: blur(8px); }
+  100% { opacity: 1; transform: translateY(0px); filter: blur(0px); }
+}
+.animate-fadeSlideIn {
+  animation: fadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 6. Column Reveal */
+@keyframes columnReveal {
+  0%   { clip-path: inset(0 0 100%); opacity: 0; }
+  100% { clip-path: inset(0 0 0%);   opacity: 1; }
+}
+
+/* 7. Sonar Ring */
+@keyframes sonar {
+  0%   { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+/* 8. Counter Animation */
+@keyframes countUp {
+  0%   { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   TRANSITIONS
+   ============================================ */
+.transition-standard { transition: all 300ms ease; }
+.transition-slow     { transition: all 700ms ease; }
+.transition-colors   { transition: color 300ms ease, background-color 300ms ease; }
+.transition-transform { transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Nav link hover */
+.nav-link:hover { opacity: 0.5; transition: opacity 300ms ease; }
+
+/* ============================================
+   SCROLL-TRIGGERED
+   ============================================ */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+}
+[data-animate].in-view {
+  animation: fadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+[data-stagger] > *:nth-child(1) { animation-delay: 0ms; }
+[data-stagger] > *:nth-child(2) { animation-delay: 100ms; }
+[data-stagger] > *:nth-child(3) { animation-delay: 200ms; }
+[data-stagger] > *:nth-child(4) { animation-delay: 300ms; }
+[data-stagger] > *:nth-child(5) { animation-delay: 400ms; }
+[data-stagger] > *:nth-child(6) { animation-delay: 500ms; }
+[data-stagger] > *:nth-child(7) { animation-delay: 600ms; }
+[data-stagger] > *:nth-child(8) { animation-delay: 700ms; }
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
